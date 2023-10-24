@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css" integrity="sha384-3fdgwJw17Bi87e1QQ4fsLn4rUFqWw//KU0g8TvV6quvahISRewev6/EocKNuJmEw" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <b style="font-size: 26px">Logo</b>
+        </a>
+      </div>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/" class="nav-link px-2 link-secondary">Главное</a></li>
+        <li><a href="/edit" class="nav-link px-2">Добавить компанию</a></li>
+      </ul>
+
+      <div class="col-md-1 text-end">
+        <a href="/admin" class="btn btn-outline-primary me-2">Login</a>
+      </div>
+    </header>
+  </div>
+    <main class="container" style="padding-bottom: 60px">
+        {% block content %}
+        {% endblock content %}
+    </main>
+</body>
+</html>

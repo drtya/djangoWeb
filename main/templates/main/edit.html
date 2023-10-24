@@ -1,0 +1,26 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+Добавить корпорацию
+{% endblock title %}
+
+{% block content %}
+
+<form method="POST" action="create/" style="position: fixed;left: 50%;top: 50%;transform: translate(-50%,-50%);display: flex;align-items: center;gap: 8px;flex-direction: column;justify-content: center;border-radius: 15px;box-shadow: 0 0 15px 0 rgba(38,31,100,0.5); padding: 20px 40px">
+        {% csrf_token %}
+        <h3>Добавьте корпорацию</h3>
+
+    <input style="border: none ;border-radius: 6px; background: rgba(205,205,255,0.6);padding: 6px 16px; outline: none;" type="text" placeholder="Введите название корпорации" name="title" value="{{corp.name}}" />
+
+        <input style="border: none ;border-radius: 6px; background: rgba(205,205,255,0.6);padding: 6px 16px; outline: none;"  type="text" placeholder="Введите url-картинки" name="image" value="{{corp.age}}" />
+
+    <input style="border: none ;border-radius: 6px; background: rgba(205,205,255,0.6);padding: 6px 16px; outline: none;"  type="text" placeholder="Введите описание" name="descr" value="{{corp.name}}" />
+
+        <input style="border: none ;border-radius: 6px; background: rgba(205,205,255,0.6);padding: 6px 16px; outline: none;"  type="text" placeholder="Введите имя основателя компании" name="ovner" value="{{corp.age}}" />
+
+        <input style="border: none ;border-radius: 6px; background: rgba(205,205,255,0.6);padding: 6px 16px; outline: none;"  type="text" placeholder="Введите годы активности компании" name="age" value="{{corp.name}}" />
+
+        <input style="margin-top: 10px; padding: 6px 30px;border-radius: 6px;background: rgba(70,70,238,0.8);color: white;border: none" type="submit" value="Сохранить" >
+    </form>
+
+{% endblock content %}
